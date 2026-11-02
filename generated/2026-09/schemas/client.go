@@ -23,7 +23,7 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/clarkmcc/go-hubspot"
+	"github.com/phocassoftware/go-hubspot"
 	"net/url"
 	"os"
 	"path/filepath"

@@ -372,7 +372,7 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
-	err = os.Setenv("GIT_USER_ID", "clarkmcc")
+	err = os.Setenv("GIT_USER_ID", "phocassoftware")
 	if err != nil {
 		panic(err)
 	}
@@ -484,10 +484,10 @@ func main() {
 				b = bytes.Replace(b, authWalkAnchor, append(append([]byte{}, authWalkAnchor...), authInject...), 1)
 
 				// Add the import for the authorization package (once).
-				if !bytes.Contains(b, []byte("\"github.com/clarkmcc/go-hubspot\"")) {
+				if !bytes.Contains(b, []byte("\"github.com/phocassoftware/go-hubspot\"")) {
 					idx := bytes.Index(b, []byte("\"net/url\""))
 					if idx >= 0 {
-						b = bytes.Join([][]byte{b[:idx], []byte("\t\"github.com/clarkmcc/go-hubspot\""), b[idx:]}, []byte("\n"))
+						b = bytes.Join([][]byte{b[:idx], []byte("\t\"github.com/phocassoftware/go-hubspot\""), b[idx:]}, []byte("\n"))
 					}
 				}
 
