@@ -28,18 +28,12 @@ re-generate — the generator derives collision-free method names automatically 
 
 ## Installing
 
-The module path is still `github.com/clarkmcc/go-hubspot`. To consume this fork, add a
-`replace` directive in your `go.mod`:
-
-```go
-require github.com/clarkmcc/go-hubspot v0.0.0
-
-replace github.com/clarkmcc/go-hubspot => github.com/phocassoftware/go-hubspot <commit-or-tag>
-```
-
 ```shell
-go mod tidy
+go get github.com/phocassoftware/go-hubspot@latest
 ```
+
+This fork uses its own module path (`github.com/phocassoftware/go-hubspot`), so no
+`replace` directive is needed — import it directly.
 
 ## Using the clients
 
@@ -50,8 +44,8 @@ request, and execute it:
 import (
 	"context"
 
-	hubspot "github.com/clarkmcc/go-hubspot"
-	"github.com/clarkmcc/go-hubspot/generated/2026-09/contacts"
+	hubspot "github.com/phocassoftware/go-hubspot"
+	"github.com/phocassoftware/go-hubspot/generated/2026-09/contacts"
 )
 
 // Authorize with a private-app token (see Authorization below).

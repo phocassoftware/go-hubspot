@@ -1,4 +1,4 @@
-module github.com/clarkmcc/go-hubspot
+module github.com/phocassoftware/go-hubspot
 
 go 1.26.0
 
